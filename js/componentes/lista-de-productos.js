@@ -1,4 +1,4 @@
-import './product-card.js';
+import './tarjeta-producto.js';
 
 export class ProductList extends HTMLElement {
   constructor() {

@@ -1,6 +1,6 @@
 import { fetchCatalog } from './api.js';
-import { loadCart, saveCart } from './storage.js';
-import { CartManager } from './cart.js';
+import { loadCart, saveCart } from './almacenamiento.js';
+import { CartManager } from './carrito.js';
 import './componentes/lista-de-productos.js';
 import './componentes/carrito-de-compras.js';
 
@@ -77,7 +77,7 @@ class App {
   }
 
   setupCategoriesDropdown() {
-    const categories = [...new Set(this.catalog.map(p => p.categoría))];
+    const categories = [...new Set(this.catalog.map(p => p.categoria))];
     categories.forEach(cat => {
       const option = document.createElement('option');
       option.value = cat;
@@ -152,13 +152,13 @@ class App {
     if (searchTerm) {
       result = result.filter(p => 
         p.name.toLowerCase().includes(searchTerm) || 
-        p.description.toLowerCase().includes(searchTerm)
+        p.descripcion.toLowerCase().includes(searchTerm)
       );
     }
 
     // Filtrar por categoría
     if (selectedCategory) {
-      result = result.filter(p => p.categoría === selectedCategory);
+      result = result.filter(p => p.categoria === selectedCategory);
     }
 
     // Filtrar solo productos disponibles (activos y stock > 0)

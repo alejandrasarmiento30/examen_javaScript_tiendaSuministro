@@ -1,13 +1,13 @@
 :root {
-  --primary-color: #2563eb;
-  --primary-hover: #1d4ed8;
+  --primary-color: #d66f91;
+  --primary-hover: #bd5578;
   --danger-color: #dc2626;
   --success-color: #16a34a;
-  --bg-color: #f8fafc;
-  --card-bg: #ffffff;
+  --bg-color: #fff1f5;
+  --card-bg: #fffafb;
   --text-main: #1e293b;
   --text-muted: #64748b;
-  --border-color: #cbd5e1;
+  --border-color: #edc8d4;
   --radius: 8px;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
@@ -138,6 +138,13 @@ product-card {
   justify-content: space-between;
   position: relative;
   transition: transform 0.2s;
+}
+
+.product-card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 product-card:hover {
@@ -360,9 +367,9 @@ shopping-cart h2 {
   border: 1px solid #f87171;
 }
 .alert-info {
-  background-color: #e0f2fe;
-  color: #0369a1;
-  border: 1px solid #7dd3fc;
+  background-color: #ffe8ef;
+  color: #8d3f5b;
+  border: 1px solid #f2bfd0;
 }
 
 /* Modal de Confirmación */

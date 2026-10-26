@@ -18,10 +18,10 @@ export async function fetchCatalog() {
       return {
         id: item.id,
         name: item.name,
-        categoría: item.categoría || 'General',
+        categoria: item.categoria || 'General',
         precio: item.precio >= 0 ? item.precio : 0,
         stock: item.stock >= 0 ? item.stock : 0,
-        description: item.description || '',
+        descripcion: item.descripcion || '',
         activo: Boolean(item.activo)
       };
     });

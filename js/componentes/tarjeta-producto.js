@@ -9,30 +9,31 @@ export class ProductCard extends HTMLElement {
 
         const product = this._product;
         const available = product.activo && product.stock > 0;
-        const card = document.createElement('article');
-        card.className = 'tarjeta-producto';
+        const card = document.createElement('div');
+        card.className = 'product-card-content';
 
-        const title = document.createElement('h2');
+        const title = document.createElement('h3');
         title.textContent = product.name;
 
         const category = document.createElement('p');
-        category.className = 'categoria-producto';
+        category.className = 'category';
         category.textContent = product.categoria;
 
         const description = document.createElement('p');
+        description.className = 'description';
         description.textContent = product.descripcion;
 
         const price = document.createElement('p');
-        price.className = 'precio-producto';
+        price.className = 'price';
         price.textContent = new Intl.NumberFormat('es-CO', {
             style: 'currency',
             currency: 'COP',
             maximumFractionDigits: 0
         }).format(product.precio);
 
-        const stock = document.createElement('p');
-        stock.className = 'stock-producto';
-        stock.textContent = product.stock > 0 ? `Existencias: ${product.stock}` : 'Sin existencias';
+        const badge = document.createElement('span');
+        badge.className = `badge ${available ? 'available' : 'out'}`;
+        badge.textContent = available ? `Disponible: ${product.stock}` : 'No disponible';
 
         const button = document.createElement('button');
         button.type = 'button';
@@ -41,13 +42,13 @@ export class ProductCard extends HTMLElement {
         button.textContent = available ? 'Agregar al carrito' : 'No disponible';
         button.setAttribute('aria-label', `${button.textContent}: ${product.name}`);
         button.addEventListener('click', () => {
-            this.dispatchEvent(new CustomEvent('agregar-producto', {
+            this.dispatchEvent(new CustomEvent('add-to-cart', {
                 bubbles: true,
-                detail: { productId: product.id }
+                detail: { id: product.id, quantity: 1 }
             }));
         });
 
-        card.append(title, category, description, price, stock, button);
+        card.append(badge, title, category, description, price, button);
         this.replaceChildren(card);
     }
 }
