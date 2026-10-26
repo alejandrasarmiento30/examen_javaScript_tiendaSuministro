@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoStock - Tienda de Suministros Tecnológicos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- Cabecera de la tienda -->
+  <header>
+    <h1>TecnoStock ⚡</h1>
+    <div class="cart-summary-indicator" id="cart-summary-indicator">
+      🛒 0 unidades
+    </div>
+  </header>
+
+  <!-- Contenedor principal de la aplicación -->
+  <main>
+    <!-- Sección de Catálogo y Filtros -->
+    <section class="catalog-section" id="catalog-section">
+      
+      <!-- Barra de búsqueda, filtros y ordenamiento -->
+      <div class="filters-bar">
+        <input type="text" id="search-input" placeholder="Buscar por nombre o descripción...">
+        
+        <select id="category-select">
+          <option value="">Todas las categorías</option>
+        </select>
+
+        <label>
+          <input type="checkbox" id="available-checkbox"> Solo disponibles
+        </label>
+
+        <select id="sort-select">
+          <option value="default">Ordenar por...</option>
+          <option value="asc">Precio: Menor a Mayor</option>
+          <option value="desc">Precio: Mayor a Menor</option>
+        </select>
+
+        <button class="btn-secondary" id="clear-filters-btn">Limpiar filtros</button>
+      </div>
+
+      <!-- Contenedor de Mensajes Globales (Carga, errores) -->
+      <div id="global-message"></div>
+
+      <!-- Componente web: Listado de productos -->
+      <product-list id="product-list-element"></product-list>
+    </section>
+
+    <!-- Componente web: Carrito de Compras -->
+    <aside>
+      <shopping-cart id="shopping-cart-element"></shopping-cart>
+    </aside>
+  </main>
+
+  <!-- Lógica principal de la aplicación -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

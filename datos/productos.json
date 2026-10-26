@@ -1,0 +1,121 @@
+[
+    {
+        "id": 101,
+        "name": "teclado mecanico",
+        "categoria": "pereferico", 
+        "precio": 1750000,
+        "stock": 8,
+        "descripcion": "teclado mecanico con iuminacion",
+        "activo": true
+    },
+
+    {
+        "id": 102,
+        "name": "mause inalambrico",
+        "categoria": "pereferico", 
+        "precio": 80000,
+        "stock": 10,
+        "descripcion": "mause inalambrico de alta precision",
+        "activo": true
+    },
+
+    {
+        "id": 103,
+        "name": "monitor led FullHD",
+        "categoria": "monitor", 
+        "precio": 655000,
+        "stock": 3,
+        "descripcion": "monitor de 24 pulgadas",
+        "activo": true
+    },
+
+    {
+        "id": 104,
+        "name": "audiculares game",
+        "categoria": "accesorio", 
+        "precio": 115000,
+        "stock": 11,
+        "descripcion": "audiculares con sonido estereo y cancelacion de ruido",
+        "activo": true
+    },
+
+    {
+        "id": 105,
+        "name": "refrigerador para portatil",
+        "categoria": "accesorio", 
+        "precio": 48000,
+        "stock": 15,
+        "descripcion": "ventilador silencioso para laptops",
+        "activo": true
+    },
+
+    {
+        "id": 106,
+        "name": "disco duro",
+        "categoria": "almacenamiento", 
+        "precio": 320000,
+        "stock": 5,
+        "descripcion": "unidad de almacenamiento de alta velocidad",
+        "activo": true
+    },
+
+    {
+        "id": 107,
+        "name": "USB de 4 puertos",
+        "categoria": "accesorio", 
+        "precio": 38000,
+        "stock": 12,
+        "descripcion": "USB con con 4 puertos de entrada ultrarrapido",
+        "activo": true
+    },
+
+    {
+        "id": 108,
+        "name": "memoria USB",
+        "categoria": "almacenamiento", 
+        "precio": 25000,
+        "stock": 26,
+        "descripcion": "Alta velocidad y rendimiento",
+        "activo": true
+    },
+
+        {
+        "id": 109,
+        "name": "alfombra para mause",
+        "categoria": "pereferico",
+        "precio": 29000,
+        "stock": 5,
+        "descripcion": "alfombra deslizante con base antideslizante",
+        "activo": true
+    },
+
+    {
+        "id": 110,
+        "name": "cable HDMI",
+        "categoria": "accesorio", 
+        "precio": 23000,
+        "stock": 3,
+        "descripcion": "cable compatible con 4k de alta definicion",
+        "activo": true
+    },
+
+    {
+        "id": 111,
+        "name": "camara WED",
+        "categoria": "pereferico", 
+        "precio": 115000,
+        "stock": 4,
+        "descripcion": "camara WED con microfono incorporado ideal para teletrabajos y clase",
+        "activo": true
+    },
+
+        {
+        "id": 112,
+        "name": "forro para protatil",
+        "categoria": "accesorio", 
+        "precio": 113000,
+        "stock": 4,
+        "descripcion": "forro para protatil para pantallas de 17 a 82 pulgadas",
+        "activo": true
+    }
+]
